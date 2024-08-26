@@ -50,7 +50,7 @@ nav ul li{
 }
 
 .songbanner{
-    /* width: 100px; */
+   
     position: absolute;
     left: 800px;
     top: 520px;
@@ -131,4 +131,80 @@ nav ul li{
 
 #mastersong{
     font-size: 30px;
+}
+
+
+/* Responsive Styles */
+
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .songbanner {
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .songlist {
+        width: 100%;
+    }
+    
+    .bottom {
+        height: 100px;
+    }
+    
+    #myprogressbar {
+        width: 90vw;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    nav ul li {
+        padding: 10px 0;
+    }
+    
+    /* Hide "Home" and "About" on small screens */
+    nav ul li.home,
+    nav ul li.about {
+        display: none;
+    }
+    
+    .brand {
+        font-size: 1.2rem;
+    }
+    
+    .songbanner {
+        display: none; /* Hide song banner on mobile */
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    .bottom {
+        height: 80px;
+    }
+    
+    #myprogressbar {
+        width: 95vw;
+    }
+    
+    .songinfo {
+        left: 5vw;
+    }
+    
+    #mastersong {
+        font-size: 24px;
+    }
 }
